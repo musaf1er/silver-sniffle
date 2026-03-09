@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova | Future of Tech</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="container nav-wrapper">
+            <div class="logo">NOVA<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#product">Product</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+            <a href="#" class="btn-primary small">Get Started</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <span class="badge">New Release 2026</span>
+                <h1>Desain Masa Depan di Tangan Anda.</h1>
+                <p>Pengalaman teknologi yang lebih personal, lebih cepat, dan jauh lebih elegan. Diciptakan untuk Anda yang menghargai kesempurnaan.</p>
+                <div class="hero-btns">
+                    <a href="#" class="btn-primary">Buy Now</a>
+                    <a href="#" class="btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="product-blob"></div>
+                <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&q=80&w=800" alt="Premium Product">
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Kenapa Memilih Nova?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon">✦</div>
+                    <h3>Ultra Fast</h3>
+                    <p>Performa maksimal tanpa kompromi dengan chip generasi terbaru.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">☁</div>
+                    <h3>Cloud Sync</h3>
+                    <p>Sinkronisasi data instan di semua perangkat Anda secara aman.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🛡</div>
+                    <h3>Secure</h3>
+                    <p>Enkripsi tingkat tinggi untuk menjaga privasi data pribadi Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="product" class="showcase">
+        <div class="container">
+            <div class="showcase-box">
+                <img src="https://images.unsplash.com/photo-1491933382434-500287f9b54b?auto=format&fit=crop&q=80&w=1200" alt="Showcase Product">
+                <div class="overlay-text">
+                    <h3>Retina Display Pro</h3>
+                    <p>Warna yang lebih hidup dan detail yang tajam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Pilih Paket Anda</h2>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h4>Basic</h4>
+                    <div class="price">$9<span>/mo</span></div>
+                    <ul>
+                        <li>Standard Support</li>
+                        <li>1 Device</li>
+                        <li>5GB Storage</li>
+                    </ul>
+                    <a href="#" class="btn-secondary">Choose Plan</a>
+                </div>
+                <div class="price-card featured">
+                    <span class="popular-tag">Most Popular</span>
+                    <h4>Pro</h4>
+                    <div class="price">$29<span>/mo</span></div>
+                    <ul>
+                        <li>Priority Support</li>
+                        <li>5 Devices</li>
+                        <li>50GB Storage</li>
+                    </ul>
+                    <a href="#" class="btn-primary">Choose Plan</a>
+                </div>
+                <div class="price-card">
+                    <h4>Enterprise</h4>
+                    <div class="price">$99<span>/mo</span></div>
+                    <ul>
+                        <li>24/7 Dedicated Support</li>
+                        <li>Unlimited Devices</li>
+                        <li>Unlimited Storage</li>
+                    </ul>
+                    <a href="#" class="btn-secondary">Choose Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container cta-content">
+            <h2>Siap untuk Memulai?</h2>
+            <p>Bergabunglah dengan ribuan pengguna yang telah beralih ke masa depan.</p>
+            <a href="#" class="btn-primary">Order Now — It's Free</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">NOVA<span>.</span></div>
+                <p>Elevating your digital lifestyle since 2026.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Product</h4>
+                <a href="#">Features</a>
+                <a href="#">Pricing</a>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nova Tech Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
