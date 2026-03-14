@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>for you, with love 💌</title>
+  <!-- Fonts & basic styling will be in style.css -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- soft pink background & floating hearts (canvas or divs) will be handled in CSS/JS -->
+  <div class="floating-hearts-container" id="heartCanvas"></div>
+  
+  <!-- main sections as steps (hidden/show) -->
+  <div class="sections-container">
+    <!-- SECTION 1 — SECRET OPENING (black screen, typing) -->
+    <section class="step active" id="step1">
+      <div class="black-screen">
+        <div class="typing-container">
+          <p id="typingLine1"></p>
+          <p id="typingLine2"></p>
+          <div class="loading-bar" id="loadingBar"><span></span></div>
+          <p id="typingLine3"></p>
+          <p id="typingLine4"></p>
+        </div>
+        <button class="glow-btn secret-btn" id="enterBtn" style="display: none;">I am Abel</button>
+      </div>
+    </section>
+
+    <!-- SECTION 2 — PERSONAL MESSAGE (soft pink) -->
+    <section class="step" id="step2">
+      <div class="glass-card message-card">
+        <p id="personalMsg"></p>
+        <button class="next-btn" id="toStep3">Continue</button>
+      </div>
+    </section>
+
+    <!-- SECTION 3 — MEMORY GALLERY -->
+    <section class="step" id="step3">
+      <h2 class="section-title">Photo that made me smile</h2>
+      <div class="gallery-grid">
+        <!-- images will be placeholders — replace with your own -->
+        <div class="gallery-item"><img src="my1.jpeg" alt="memory 1"></div>
+        <div class="gallery-item"><img src="my2.jpeg" alt="memory 2"></div>
+        <div class="gallery-item"><img src="my3.jpeg" alt="memory 3"></div>
+        <!-- you can add more later, just replace src with img/photoX.jpg -->
+      </div>
+      <!-- lightbox (simple) -->
+      <div class="lightbox" id="lightbox"><img src="" alt=""><span class="close-lightbox">&times;</span></div>
+      <button class="next-btn" id="toStep4">Continue</button>
+    </section>
+
+    <!-- SECTION 4 — MINI GAME: CATCH MY HEART -->
+    <section class="step" id="step4">
+      <h2 class="section-title">💖 Small challenge before I continue</h2>
+      <div class="game-container glass-card">
+        <p>Catch <span id="heartsCaught">0</span>/10 hearts</p>
+        <div class="game-area" id="gameArea">
+          <div class="catcher" id="catcher">🧺</div>
+        </div>
+        <button class="next-btn" id="toStep5" disabled style="opacity:0.5;">Continue</button>
+      </div>
+    </section>
+
+    <!-- SECTION 5 — THE REAL MESSAGE -->
+    <section class="step" id="step5">
+      <div class="glass-card message-card long-message">
+        <p id="realMessageLine1"></p>
+        <p id="realMessageLine2"></p>
+        <p id="realMessageLine3"></p>
+        <p id="realMessageLine4"></p>
+        <p id="realMessageLine5"></p>
+        <p id="realMessageLine6"></p>
+        <button class="next-btn" id="toStep6">Continue</button>
+      </div>
+    </section>
+
+    <!-- SECTION 6 — THE CONFESSION (short) -->
+    <section class="step" id="step6">
+      <div class="glass-card center-text">
+        <p class="confession-text">"I like you."</p>
+        <p class="confession-text">"Not just as a friend."</p>
+        <p class="confession-text">"You mean more to me than that."</p>
+        <p class="confession-text">"So I want to ask you something."</p>
+        <button class="next-btn" id="toStep7">Continue</button>
+      </div>
+    </section>
+
+    <!-- SECTION 7 — THE QUESTION + YES/STILL THINKING -->
+    <section class="step" id="step7">
+      <div class="glass-card big-question">
+        <h1>Will you be my girlfriend?</h1>
+        <div class="button-pair">
+          <button class="yes-btn" id="yesBtn">Yes ❤️</button>
+          <button class="no-btn" id="noBtn">Still thinking 🤭</button>
+        </div>
+        <div id="yesMessage" style="display: none;"></div>
+      </div>
+    </section>
+
+    <!-- FINAL FOOTER (will appear after yes or maybe after step7) -->
+    <footer class="final-footer" id="finalFooter" style="display: none;">
+      <p>"This whole website exists because you exist."</p>
+      <p>Made with love by someone who really cares about you.</p>
+    </footer>
+  </div>
+
+  <!-- soft background music (hidden autoplay with user interaction) -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="loving.mp3" type="audio/mpeg">
+    <!-- fallback: romantic piano -->
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
