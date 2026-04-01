@@ -1,0 +1,19 @@
+{
+  "name": "ai-productivity-dashboard",
+  "version": "1.0.0",
+  "description": "AI-powered productivity dashboard with task management, habit tracking, and pomodoro timer",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "dev": "nodemon server/app.js"
+  },
+  "keywords": ["productivity", "ai", "dashboard", "tasks", "habits", "pomodoro"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>AI Productivity Dashboard | FocusFlow</title>
+    <link rel="stylesheet" href="client/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar / Header Hybrid for compactness -->
+        <aside class="sidebar">
+            <div class="logo-area">
+                <i class="fas fa-brain"></i>
+                <span>FocusFlow</span>
+            </div>
+            <nav class="nav-links">
+                <button class="nav-btn active" data-view="todo"><i class="fas fa-tasks"></i><span>Tasks</span></button>
+                <button class="nav-btn" data-view="habits"><i class="fas fa-calendar-check"></i><span>Habits</span></button>
+                <button class="nav-btn" data-view="timer"><i class="fas fa-hourglass-half"></i><span>Pomodoro</span></button>
+                <button class="nav-btn" data-view="ai"><i class="fas fa-robot"></i><span>AI Coach</span></button>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="darkModeToggle" class="icon-btn"><i class="fas fa-moon"></i></button>
+                <div class="version">v2.0 · AI driven</div>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <!-- TODO VIEW -->
+            <section id="todo-view" class="view-section active-view">
+                <div class="view-header">
+                    <h1><i class="fas fa-list-check"></i> Smart Tasks</h1>
+                    <div class="header-actions">
+                        <button id="newTaskBtn" class="primary-btn"><i class="fas fa-plus"></i> New Task</button>
+                        <span class="key-hint">⌘N</span>
+                    </div>
+                </div>
+                <div class="todo-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="pending">Pending</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+                <div id="todo-list-container" class="todo-list drop-zone">
+                    <!-- dynamic tasks with drag drop -->
+                </div>
+                <div id="empty-todo" class="empty-state hidden">
+                    <i class="fas fa-clipboard-list"></i>
+                    <p>No tasks yet. Press "N" or click New Task</p>
+                </div>
+            </section>
+
+            <!-- HABIT VIEW -->
+            <section id="habits-view" class="view-section">
+                <div class="view-header">
+                    <h1><i class="fas fa-seedling"></i> Daily Habits</h1>
+                    <button id="addHabitBtn" class="secondary-btn"><i class="fas fa-plus"></i> Add habit</button>
+                </div>
+                <div id="habit-stats" class="habit-stats-card">
+                    <div class="streak-box"><span id="totalStreak">0</span> day streak 🔥</div>
+                    <div class="progress-bar-container"><div id="habitProgressFill" class="progress-fill" style="width:0%"></div></div>
+                </div>
+                <div id="habits-list" class="habits-grid"></div>
+                <div id="empty-habits" class="empty-state hidden">
+                    <i class="fas fa-heart-broken"></i>
+                    <p>No habits yet. Build consistency!</p>
+                </div>
+            </section>
+
+            <!-- TIMER VIEW -->
+            <section id="timer-view" class="view-section">
+                <div class="timer-card">
+                    <div class="timer-mode-selector">
+                        <button id="focusModeBtn" class="mode-btn active">Focus (25:00)</button>
+                        <button id="breakModeBtn" class="mode-btn">Break (5:00)</button>
+                    </div>
+                    <div class="timer-display"><span id="timerMinutes">25</span>:<span id="timerSeconds">00</span></div>
+                    <div class="timer-controls">
+                        <button id="startTimerBtn" class="timer-action play"><i class="fas fa-play"></i></button>
+                        <button id="pauseTimerBtn" class="timer-action pause"><i class="fas fa-pause"></i></button>
+                        <button id="resetTimerBtn" class="timer-action reset"><i class="fas fa-undo-alt"></i></button>
+                    </div>
+                    <div id="timerNotification" class="notification-toast hidden">Time's up! 🎯</div>
+                </div>
+            </section>
+
+            <!-- AI VIEW -->
+            <section id="ai-view" class="view-section">
+                <div class="view-header">
+                    <h1><i class="fas fa-microchip"></i> AI Productivity Coach</h1>
+                    <button id="refreshAiBtn" class="icon-btn"><i class="fas fa-sync-alt"></i></button>
+                </div>
+                <div id="aiSuggestions" class="ai-suggestions-card">
+                    <div class="skeleton-loader"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- MODAL for task/habit creation -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modalTitle">Create Task</h3>
+            <input type="text" id="taskInput" placeholder="Task title" autocomplete="off">
+            <input type="datetime-local" id="taskDeadline">
+            <div class="modal-buttons">
+                <button id="saveTaskBtn" class="primary-btn">Save</button>
+                <button id="cancelModalBtn" class="secondary-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="habitModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>New Habit</h3>
+            <input type="text" id="habitNameInput" placeholder="e.g., Morning Meditation">
+            <div class="modal-buttons">
+                <button id="saveHabitBtn" class="primary-btn">Add habit</button>
+                <button id="cancelHabitModalBtn" class="secondary-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="client/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# README.md
+# AI Productivity Dashboard - FocusFlow
+
+A production-ready, fullstack productivity application that combines task management, habit tracking, a Pomodoro timer, and AI-powered suggestions. Built with vanilla JavaScript on the frontend and Node.js/Express on the backend.
+
+## 🚀 Features
+
+- **Smart Task Management**: Create, update, delete, and reorder tasks with drag & drop. Deadline tracking with overdue highlighting.
+- **Habit Tracker**: Daily habit checklist with streak counter and visual progress tracking.
+- **Pomodoro Timer**: Focus and break modes with completion notifications.
+- **AI Coach**: Intelligent suggestions based on task load and habit completion (rule-based AI).
+- **Dark Mode**: Toggle between light and dark themes.
+- **Keyboard Shortcuts**: Press `Ctrl+N` (or `Cmd+N`) to quickly create a
