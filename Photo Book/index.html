@@ -1,0 +1,99 @@
+<!-- --- index.html --- -->
+<!-- PART 1: HTML Structure -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Our 3D Memory Album · Romantic Flip Book</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- PageFlip Library CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/page-flip@1.2.1/dist/css/page-flip.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Floating hearts background -->
+  <div class="floating-hearts" id="floatingHearts"></div>
+
+  <!-- Landing Page Section -->
+  <div class="landing-page" id="landingPage">
+    <div class="landing-content">
+      <h1 class="album-title">✧ Our Special Memory Album ✧</h1>
+      <p class="album-subtitle">Every page holds a piece of our story</p>
+      <button class="open-album-btn" id="openAlbumBtn">Open Album</button>
+    </div>
+    <div class="scroll-indicator">↓</div>
+  </div>
+
+  <!-- Main Album Container (hidden initially) -->
+  <div class="album-container" id="albumContainer" style="display: none;">
+    <!-- Background music (optional, muted by default) -->
+    <audio id="bgMusic" loop muted>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+    <button class="music-toggle" id="musicToggle">🎵</button>
+
+    <!-- 3D Book Container -->
+    <div class="book-wrapper">
+      <div id="book" class="flipbook"></div>
+    </div>
+
+    <!-- Add Memory Button & Controls -->
+    <div class="album-controls">
+      <button class="add-memory-btn" id="addMemoryBtn">+ Add New Memory</button>
+      <div class="page-indicator" id="pageIndicator">Page 1 / 1</div>
+    </div>
+
+    <!-- Hidden Add Memory Modal -->
+    <div class="modal" id="addMemoryModal">
+      <div class="modal-content">
+        <span class="close-modal" id="closeModal">&times;</span>
+        <h2>Add a New Memory</h2>
+        <form id="addMemoryForm">
+          <div class="form-group">
+            <label for="memoryCaption">Caption / Message</label>
+            <textarea id="memoryCaption" rows="3" placeholder="What makes this moment special?" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="memoryPhoto">Choose Photo</label>
+            <input type="file" id="memoryPhoto" accept="image/*" required>
+            <div class="preview-image" id="imagePreview"></div>
+          </div>
+          <div class="form-group">
+            <label for="memoryDate">Date</label>
+            <input type="date" id="memoryDate" required>
+          </div>
+          <button type="submit" class="submit-memory-btn">Save Memory</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Lightbox for fullscreen viewing -->
+    <div class="lightbox" id="lightbox">
+      <span class="close-lightbox" id="closeLightbox">&times;</span>
+      <div class="lightbox-content" id="lightboxContent">
+        <img src="" alt="" id="lightboxImg">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage-compat.js"></script>
+  
+  <!-- PageFlip Library -->
+  <script src="https://cdn.jsdelivr.net/npm/page-flip@1.2.1/dist/js/page-flip.browser.min.js"></script>
+  
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>

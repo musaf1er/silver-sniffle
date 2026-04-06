@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: coral;
+            animation: square-to-circle 2s .5s infinite cubic-bezier(1,.015,.205,1.225) alternate;
+            outline: 1px solid transparent;
+            margin-left: 3cm;
+        }
+
+        @keyframes square-to-circle {
+            0% {
+                border-radius: 0 0 0 0;
+                background-color: coral;
+                transform: rotate(0deg);
+            }
+            25% {
+                border-radius: 50% 0 0 0;
+                background-color: indianred;
+                transform: rotate(45deg);
+            }
+            50% {
+                border-radius: 50% 50% 0 0;
+                background-color: indianred;
+                transform: rotate(90deg);
+            }
+            75% {
+                border-radius: 50% 50% 50% 0;
+                background-color: lightcoral;
+                transform: rotate(135deg);
+            }
+            100% {
+                border-radius: 50% 50% 50% 50%;
+                background-color: darksalmon;
+                transform: rotate(180deg);
+            }
+        }
+
+        @-webkit-keyframes square-to-circle {
+            0% {
+                border-radius: 0 0 0 0;
+            }
+            25% {
+                border-radius: 50% 0 0 0;
+            }
+            50% {
+                border-radius: 50% 50% 0 0;
+            }
+            75% {
+                border-radius: 50% 50% 50% 0;
+            }
+            100% {
+                border-radius: 50% 50% 50% 50%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div></div>
+
+</body>
+</html>
