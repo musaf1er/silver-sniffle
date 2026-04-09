@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel Data Murid SMK - Tugas HTML CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            background-color: #f0f7f0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        /* Container tabel */
+        .table-container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 30px 25px;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+
+        /* Judul tabel */
+        .judul-tabel {
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            font-size: 28px;
+            text-align: center;
+            color: #2d6a2d;
+            margin-bottom: 30px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Style tabel */
+        .data-tabel {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            font-size: 15px;
+            margin: 0 auto;
+            min-width: 700px;
+        }
+
+        /* Border semua sel */
+        .data-tabel th,
+        .data-tabel td {
+            border: 1.5px solid #90c990; /* Warna border hijau muda */
+            padding: 12px 15px;
+            vertical-align: middle;
+        }
+
+        /* Style header */
+        .data-tabel th {
+            background-color: #d4ecd4; /* Hijau sangat muda untuk background header */
+            font-weight: bold;
+            text-align: center;
+            color: #1a4d1a;
+        }
+
+        /* Kolom Jurusan (pertama) rata kiri */
+        .data-tabel td:first-child {
+            text-align: left;
+            font-weight: 500;
+            background-color: #f9fff9;
+        }
+
+        /* Sel data angka rata tengah */
+        .data-tabel td {
+            text-align: center;
+        }
+
+        /* Efek hover pada baris */
+        .data-tabel tbody tr:hover {
+            background-color: #f0fae8;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Responsif untuk layar kecil */
+        @media (max-width: 768px) {
+            .judul-tabel {
+                font-size: 22px;
+            }
+            
+            .table-container {
+                padding: 20px 15px;
+            }
+            
+            .data-tabel th,
+            .data-tabel td {
+                padding: 8px 10px;
+                font-size: 13px;
+            }
+        }
+
+        /* Keterangan tambahan */
+        .catatan {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 12px;
+            color: #5a8a5a;
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <!-- Judul Tabel -->
+        <div class="judul-tabel">
+            📊 Data Jumlah Murid SMK di Daerah ABC
+        </div>
+
+        <!-- Tabel Data -->
+        <table class="data-tabel">
+            <!-- Header tabel dengan colspan dan rowspan -->
+            <thead>
+                <tr>
+                    <!-- Kolom pertama: Jurusan (rowspan 3) -->
+                    <th rowspan="3" style="vertical-align: middle;">Jurusan</th>
+                    <!-- Header Kelas (colspan 6) -->
+                    <th colspan="6">Kelas</th>
+                </tr>
+                <tr>
+                    <!-- X (colspan 2) -->
+                    <th colspan="2">X</th>
+                    <!-- XI (colspan 2) -->
+                    <th colspan="2">XI</th>
+                    <!-- XII (colspan 2) -->
+                    <th colspan="2">XII</th>
+                </tr>
+                <tr>
+                    <!-- Sub header untuk Laki-laki dan Perempuan per kelas -->
+                    <th>Laki-laki</th>
+                    <th>Perempuan</th>
+                    <th>Laki-laki</th>
+                    <th>Perempuan</th>
+                    <th>Laki-laki</th>
+                    <th>Perempuan</th>
+                </tr>
+            </thead>
+
+            <!-- Isi Tabel -->
+            <tbody>
+                <!-- Baris 1: Rekayasa Perangkat Lunak -->
+                <tr>
+                    <td>Rekayasa Perangkat Lunak</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>15</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                </tr>
+
+                <!-- Baris 2: Teknik Kendaraan Ringan -->
+                <tr>
+                    <td>Teknik Kendaraan Ringan</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>15</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                </tr>
+
+                <!-- Baris 3: Teknik Komputer dan Jaringan -->
+                <tr>
+                    <td>Teknik Komputer dan Jaringan</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>15</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                </tr>
+
+                <!-- Baris 4: Akuntansi -->
+                <tr>
+                    <td>Akuntansi</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>15</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Catatan kaki -->
+        <div class="catatan">
+            Sumber Data: Dinas Pendidikan Daerah ABC | Semester Ganjil 2025/2026
+        </div>
+    </div>
+</body>
+</html>

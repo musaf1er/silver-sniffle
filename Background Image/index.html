@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kota Malang - Keindahan Arek</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* Gambar background */
+            background-image: url('https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?q=80&w=2070&auto=format&fit=crop');
+            
+            /* Properti background */
+            background-size: cover;      /* Menutupi seluruh halaman */
+            background-position: center; /* Posisi background di tengah */
+            background-repeat: no-repeat; /* Tidak diulang */
+            background-attachment: fixed; /* Background tetap saat scroll */
+            
+            /* Font utama untuk body (fallback) */
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            
+            /* Overlay gelap agar teks lebih terbaca (opsional) */
+            position: relative;
+        }
+
+        /* Overlay tipis untuk memperjelas teks di atas background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Overlay hitam 50% */
+            z-index: 0;
+        }
+
+        /* Container untuk konten agar berada di atas overlay */
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            width: 90%;
+            margin: 0 auto;
+            padding: 60px 40px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Style untuk judul utama */
+        h1 {
+            font-family: 'Georgia', 'Times New Roman', Times, serif; /* Font serif */
+            font-size: 64px; /* Ukuran font besar */
+            color: #2d5a27; /* Warna hijau tua */
+            text-align: center; /* Rata tengah */
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.3);
+        }
+
+        /* Style untuk paragraf */
+        p {
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            font-size: 18px;
+            color: #333333; /* Warna abu-abu gelap */
+            text-align: justify; /* Rata kiri-kanan */
+            line-height: 1.8; /* Jarak antar baris agar nyaman dibaca */
+            background-color: rgba(255, 255, 255, 0.85); /* Background putih transparan untuk keterbacaan */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Responsif untuk layar kecil (HP) */
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 42px;
+            }
+            
+            p {
+                font-size: 16px;
+                padding: 20px;
+                line-height: 1.6;
+            }
+        }
+
+        /* Responsif untuk layar sangat kecil */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 32px;
+            }
+            
+            p {
+                font-size: 14px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Judul Utama -->
+        <h1>Kota Malang</h1>
+        
+        <!-- Paragraf -->
+        <p>
+            Kota Malang terdiri atas berbagai macam orang dari berbagai macam suku bangsa dan budaya. 
+            Penduduk kota Malang mencapai 895.387 jiwa dengan suku mayoritas Jawa, diikuti dengan Madura. 
+            Wilayah Metropolitan Malang (Malang Raya) merupakan kawasan metropolitan terbesar kedua di 
+            Jawa Timur setelah Gerbangkertosusila. Jika dilihat dari sisi budaya, Kota Malang termasuk 
+            ke dalam Kawasan Kebudayaan Arek.
+        </p>
+    </div>
+</body>
+</html>

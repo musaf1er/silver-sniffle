@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kota Malang - Tampilan Informasi</title>
+    <style>
+        /* Reset margin dan padding untuk semua elemen */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Style untuk body/halaman utama */
+        body {
+            background-color: grey; /* Background abu-abu */
+            font-family: 'Georgia', 'Times New Roman', Times, serif; /* Font elegan untuk judul */
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Container utama untuk konten */
+        .container {
+            max-width: 800px; /* Batas lebar konten agar tidak full layar */
+            width: 100%;
+            background-color: grey; /* Sama dengan background body */
+            padding: 40px;
+            border-radius: 12px;
+        }
+
+        /* Style untuk judul utama */
+        h1 {
+            font-family: 'Georgia', 'Times New Roman', Times, serif; /* Font serif */
+            font-size: 64px; /* Ukuran besar */
+            color: white; /* Warna putih */
+            text-align: center; /* Rata tengah */
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            font-weight: normal;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        /* Style untuk paragraf */
+        p {
+            font-family: 'Georgia', 'Times New Roman', Times, serif; /* Font serif yang elegan */
+            font-size: 18px;
+            color: white; /* Warna putih */
+            text-align: justify; /* Rata kiri-kanan */
+            line-height: 1.8; /* Spasi antar baris agar mudah dibaca */
+            margin-bottom: 20px;
+        }
+
+        /* Responsif untuk layar kecil (HP) */
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 42px;
+            }
+            
+            p {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Judul Utama -->
+        <h1>Kota Malang</h1>
+        
+        <!-- Paragraf -->
+        <p>
+            Kota Malang terdiri atas berbagai macam orang dari berbagai macam suku bangsa dan budaya. 
+            Penduduk kota Malang mencapai 895.387 jiwa dengan suku mayoritas Jawa, diikuti dengan Madura. 
+            Wilayah Metropolitan Malang (Malang Raya) merupakan kawasan metropolitan terbesar kedua di 
+            Jawa Timur setelah Gerbangkertosusila. Jika dilihat dari sisi budaya, Kota Malang termasuk 
+            ke dalam Kawasan Kebudayaan Arek.
+        </p>
+    </div>
+</body>
+</html>

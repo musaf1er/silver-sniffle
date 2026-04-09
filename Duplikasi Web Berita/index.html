@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Berita tentang rencana Unpad memberlakukan WFH bagi pegawai dan mahasiswa">
+    <meta name="keywords" content="Unpad, WFH, berita, mahasiswa, hemat energi">
+    <meta name="author" content="M. Fauzi Ridwan">
+    <title>Unpad Segera Berlakukan WFH Pegawai dan Mahasiswa - Berita Terkini</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        /* Container utama */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header website */
+        .site-header {
+            background: linear-gradient(135deg, #1a3a5c 0%, #2c5a7a 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+            margin-bottom: 30px;
+        }
+
+        .site-header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .site-header p {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        /* Navigasi */
+        nav {
+            background-color: #2c5a7a;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        nav ul li a:hover {
+            opacity: 0.7;
+            text-decoration: underline;
+        }
+
+        /* Konten utama */
+        main {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        /* Judul artikel */
+        .article-title {
+            font-size: 2em;
+            color: #1a3a5c;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #2c5a7a;
+            padding-bottom: 10px;
+        }
+
+        /* Meta informasi (tanggal, penulis, sumber) */
+        .article-meta {
+            color: #666;
+            font-size: 0.85em;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .article-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Gambar artikel */
+        .article-image {
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .article-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .article-image figcaption {
+            font-size: 0.8em;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* Paragraf */
+        .article-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.05em;
+            color: #333;
+        }
+
+        /* Kutipan */
+        blockquote {
+            background-color: #f0f4f8;
+            border-left: 4px solid #2c5a7a;
+            padding: 15px 25px;
+            margin: 25px 0;
+            font-style: italic;
+            color: #1a3a5c;
+            border-radius: 0 10px 10px 0;
+        }
+
+        /* Sidebar */
+        aside {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 1px solid #e0e0e0;
+        }
+
+        aside h3 {
+            color: #1a3a5c;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #2c5a7a;
+            display: inline-block;
+        }
+
+        aside ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        aside ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        aside ul li::before {
+            content: "📰";
+            position: absolute;
+            left: 0;
+        }
+
+        aside ul li a {
+            color: #2c5a7a;
+            text-decoration: none;
+        }
+
+        aside ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sumber berita asli */
+        .source-box {
+            background-color: #e8f0fe;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin: 25px 0;
+            border-left: 4px solid #1a3a5c;
+        }
+
+        .source-box a {
+            color: #1a3a5c;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .source-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a3a5c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 0 0 10px 10px;
+            font-size: 0.85em;
+        }
+
+        /* Responsif */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            main {
+                padding: 20px;
+            }
+            
+            .article-title {
+                font-size: 1.5em;
+            }
+            
+            .article-content p {
+                font-size: 0.95em;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Website -->
+        <header class="site-header">
+            <h1>📰 Berita Terkini</h1>
+            <p>Informasi terpercaya, aktual, dan terkini untuk Anda</p>
+        </header>
+
+        <!-- Navigasi -->
+        <nav>
+            <ul>
+                <li><a href="#">🏠 Beranda</a></li>
+                <li><a href="#">📌 Nasional</a></li>
+                <li><a href="#">🎓 Pendidikan</a></li>
+                <li><a href="#">🏛️ Politik</a></li>
+                <li><a href="#">💼 Ekonomi</a></li>
+                <li><a href="#">⚽ Olahraga</a></li>
+            </ul>
+        </nav>
+
+        <!-- Konten Utama -->
+        <main>
+            <!-- Judul Artikel -->
+            <h1 class="article-title">Unpad Segera Berlakukan WFH Pegawai dan Mahasiswa</h1>
+            
+            <!-- Meta Informasi -->
+            <div class="article-meta">
+                <span>📅 Kamis, 9 April 2026 06:21 WIB</span>
+                <span>✍️ Penulis: M. Fauzi Ridwan</span>
+                <span>📖 Editor: Mas Alamil Huda</span>
+                <span>⏱️ Waktu baca: 3 menit</span>
+            </div>
+
+            <!-- Gambar (ilustrasi) -->
+            <figure class="article-image">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&auto=format" 
+                     alt="Ilustrasi mahasiswa belajar di kampus">
+                <figcaption>Ilustrasi suasana kampus Unpad. (Foto: Unsplash)</figcaption>
+            </figure>
+
+            <!-- Konten Artikel -->
+            <div class="article-content">
+                <p><strong>BANDUNG</strong> - Universitas Padjadjaran (Unpad) segera memberlakukan <em>work from home</em> (WFH) untuk pegawai dan mahasiswa mengikuti surat edaran pemerintah pusat. WFH diharapkan dapat memberikan dampak terhadap penghematan energi di tengah situasi krisis yang terjadi di Timur Tengah.</p>
+
+                <p>Rektor Unpad Prof Arief Kartasasmita menyambut baik kebijakan pemerintah pusat untuk melaksanakan program WFH termasuk di kampus. Kebijakan itu diharapkan dapat mengantisipasi kemungkinan terjadi krisis energi atau krisis apapun akibat kondisi geopolitik eksternal.</p>
+
+                <blockquote>
+                    "Unpad akan mengambil langkah, kita akan mendorong untuk sebagian atau perkuliahan yang tidak berkait dengan praktikum akan dilakukan WFH oleh Unpad seiring edaran tersebut."
+                </blockquote>
+
+                <p>Ia menuturkan mereka yang akan bekerja WFH selama satu hari yaitu di sektor administrasi. Kemudian, perkuliahan yang tidak membutuhkan <em>skill</em> langsung atau praktikum dan bekerja lapangan dapat melakukan WFH.</p>
+
+                <p>"Kita imbau para tendik maupun para dosen untuk bekerja di rumah. Jadi tidak bekerja di kafe atau di mana," ucap dia.</p>
+
+                <p>Ia mengatakan apabila bekerja di kafe dan di tempat lainnya maka tidak akan menyelesaikan masalah terkait mengurangi kebutuhan energi. Pihaknya segera mengimplementasikan kebijakan tersebut.</p>
+
+                <p>"Kami akan sekarang mengimplementasikan, prinsipnya adalah WFH ini tidak ingin mengganggu esensi dari pendidikan. Jadi kalau mahasiswa yang memang tidak bisa kita WFHkan ya tetap akan menjadi biasa," ungkap dia.</p>
+
+                <p>Ia mengatakan perkuliahan yang dapat dilakukan WFH akan dilakukan untuk melakukan ketahanan energi. Pihaknya belum menghitung efisiensi yang berhasil dilakukan akan tetapi pasti berdampak.</p>
+
+                <p>"Saya belum menghitung detailnya berapa, karena kan variabelnya sangat banyak. Tapi tentu akan ada dampaknya walaupun saya tidak tahu berapa persennya," kata dia.</p>
+
+                <p>Prof Arief mengatakan tantangan yang dihadapi perguruan tinggi saat ini adalah tentang disrupsi teknologi, perubahan iklim dan permasalahan global lainnya. Oleh karena itu, perguruan tinggi harus memiliki agilitas dan kepentingan untuk berubah.</p>
+
+                <p>"Sebagai contoh saja yang terbaru adalah perubahan geopolitik yang terjadi di internasional sekarang, itu meminta kita untuk segera melakukan suatu solusi yang cepat. Misalnya contoh energi akibat terjadi perang di Timur Tengah, nah itu juga salah satu bagaimana kita dapat melakukan satu perubahan kebijakan secara cepat terukur," kata dia.</p>
+            </div>
+
+            <!-- Sumber Berita Asli -->
+            <div class="source-box">
+                <strong>📌 Sumber Berita Asli:</strong><br>
+                <a href="https://news.republika.co.id/berita/td6ixl487/unpad-segera-berlakukan-wfh-pegawai-dan-mahasiswa" target="_blank" rel="noopener noreferrer">
+                    Republika.co.id - Unpad Segera Berlakukan WFH Pegawai dan Mahasiswa
+                </a>
+                <p style="margin-top: 8px; font-size: 0.8em; color: #555;">Diterbitkan: Kamis, 9 April 2026 | Penulis: M. Fauzi Ridwan | Editor: Mas Alamil Huda</p>
+            </div>
+        </main>
+
+        <!-- Sidebar Berita Terkait -->
+        <aside>
+            <h3>📌 Berita Terkait</h3>
+            <ul>
+                <li><a href="#">Perguruan Tinggi Diminta Siapkan Skema Hybrid Learning</a></li>
+                <li><a href="#">Krisis Energi Global, Pemerintah Dorong Efisiensi di Sektor Pendidikan</a></li>
+                <li><a href="#">Unpad Luncurkan Program Digitalisasi Kampus</a></li>
+                <li><a href="#">Dampak Geopolitik terhadap Sektor Pendidikan Tinggi</a></li>
+            </ul>
+        </aside>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Berita Terkini - Tugas Duplikasi Halaman Berita</p>
+            <p>Dibuat untuk memenuhi tugas mata kuliah Pemrograman Web | Konten diambil dari Republika.co.id</p>
+            <p style="margin-top: 10px; font-size: 0.75em;">*Halaman ini adalah hasil duplikasi untuk keperluan pendidikan, bukan situs berita resmi.</p>
+        </footer>
+    </div>
+</body>
+</html>
