@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - Tiga Kotak Warna</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #d3d3d3; /* Abu-abu terang */
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Container utama menggunakan Flexbox */
+        .container {
+            display: flex;
+            flex-direction: row; /* Susunan horizontal */
+            justify-content: center; /* Pusatkan konten secara horizontal */
+            align-items: center; /* Pusatkan secara vertikal */
+            gap: 30px; /* Jarak antar kotak */
+            flex-wrap: wrap; /* Agar responsif, kotak turun ke bawah jika layar kecil */
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* Style untuk setiap kotak/card */
+        .card {
+            width: 250px;
+            height: 300px;
+            display: flex;
+            flex-direction: column; /* Isi di dalam kotak tersusun vertikal */
+            border-radius: 12px;
+            overflow: hidden; /* Membuat sudut kotak melengkung dan memotong isi yang keluar */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Efek hover pada kotak */
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Style untuk bagian atas dan bawah (masing-masing 50% tinggi) */
+        .top {
+            flex: 1; /* Membagi tinggi sama rata (50%) */
+            width: 100%;
+        }
+
+        .bottom {
+            flex: 1; /* Membagi tinggi sama rata (50%) */
+            width: 100%;
+        }
+
+        /* Warna untuk Kotak 1 */
+        .card-1 .top {
+            background-color: red;
+        }
+        .card-1 .bottom {
+            background-color: green;
+        }
+
+        /* Warna untuk Kotak 2 */
+        .card-2 .top {
+            background-color: blue;
+        }
+        .card-2 .bottom {
+            background-color: red;
+        }
+
+        /* Warna untuk Kotak 3 */
+        .card-3 .top {
+            background-color: green;
+        }
+        .card-3 .bottom {
+            background-color: blue;
+        }
+
+        /* Tambahan teks di dalam kotak (opsional, untuk memperjelas) */
+        .top, .bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 14px;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        /* Responsif untuk layar kecil */
+        @media (max-width: 900px) {
+            .container {
+                gap: 20px;
+            }
+            .card {
+                width: 220px;
+                height: 270px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 200px;
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                flex-direction: column; /* Kotak disusun vertikal di HP */
+                gap: 25px;
+            }
+            .card {
+                width: 280px;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Kotak 1: Atas Merah, Bawah Hijau -->
+        <div class="card card-1">
+            <div class="top">Merah</div>
+            <div class="bottom">Hijau</div>
+        </div>
+
+        <!-- Kotak 2: Atas Biru, Bawah Merah -->
+        <div class="card card-2">
+            <div class="top">Biru</div>
+            <div class="bottom">Merah</div>
+        </div>
+
+        <!-- Kotak 3: Atas Hijau, Bawah Biru -->
+        <div class="card card-3">
+            <div class="top">Hijau</div>
+            <div class="bottom">Biru</div>
+        </div>
+    </div>
+</body>
+</html>
