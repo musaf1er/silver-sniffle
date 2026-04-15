@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post - AJAX Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Card 1: Create Post -->
+        <div class="card">
+            <h2 class="card-title">📝 Create Post</h2>
+            <form id="postForm">
+                <div class="form-group">
+                    <label for="judul">Judul</label>
+                    <input type="text" id="judul" name="judul" class="form-control" 
+                           value="Seputar Lembaga Pers Mahasiswa Mimesis">
+                </div>
+                
+                <div class="form-group">
+                    <label for="teks">Teks</label>
+                    <textarea id="teks" name="teks" class="form-control" rows="5">
+Lorem ipsum odor amet, consectetuer adipiscing elit. Nisl habitant sagittis sollicitudin mi sociosqu faucibus. Dui integer accumsan ligula, class mi suspendisse. Cursus hendrerit arcu vitae montes felis consectetur. Semper conubia adipiscing taciti torquent odio inceptos. Himenaeos auctor duis massa suspendisse litora ornare. Dignissim nisi rutrum ornare curae fermentum consectetur vivamus. Feugiat vel iaculis pharetra fusce; amet vitae taciti. Primis conubia cubilia imperdiet mauris pellentesque suspendisse. Laoreet habitant tristique semper tincidunt netus imperdiet dictumst.</textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-green">🚀 Kirim</button>
+            </form>
+        </div>
+
+        <!-- Card 2: Output -->
+        <div class="card">
+            <h2 class="card-title">📤 Output</h2>
+            <div id="outputContent" class="output-area">
+                <div class="placeholder-text">
+                    Belum ada post. Silakan isi form dan klik Kirim.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
