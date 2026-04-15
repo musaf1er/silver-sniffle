@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>To Do List | Simpan Kegiatan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="todo-card">
+    <h1>📋 To Do List</h1>
+
+    <!-- Baris horizontal: input + tiga tombol -->
+    <div class="action-row">
+        <input type="text" id="taskInput" class="task-input" placeholder="Masukkan kegiatan" autocomplete="off">
+        <button id="tambahBtn" class="btn btn-green">➕ Tambah</button>
+        <button id="muatBtn" class="btn btn-blue">📂 Muat Data</button>
+        <button id="hapusSemuaBtn" class="btn btn-red">🗑️ Hapus Data</button>
+    </div>
+
+    <!-- Area tampilan daftar to do list -->
+    <div class="todo-list-container">
+        <div class="list-header">
+            <span>📝 Daftar Kegiatan</span>
+            <span class="task-counter" id="taskCounter">0 tugas</span>
+        </div>
+        <ul class="todo-list" id="todoListUl">
+            <!-- item akan diisi javascript -->
+            <li class="empty-message">✨ Belum ada kegiatan. Tambah atau muat data!</li>
+        </ul>
+    </div>
+    <div id="infoMessage" class="info-toast"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
