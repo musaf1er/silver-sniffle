@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Kalkulator Sederhana | Modern Web App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="calculator-card">
+    <h1>Kalkulator</h1>
+
+    <!-- Baris horizontal: Angka1, operator, Angka2, tombol Hitung -->
+    <div class="input-row">
+        <input type="text" id="angka1" placeholder="Angka 1" inputmode="numeric" autocomplete="off">
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="text" id="angka2" placeholder="Angka 2" inputmode="numeric" autocomplete="off">
+        <button class="btn-hitung" id="hitungBtn">Hitung</button>
+    </div>
+
+    <!-- Area hasil: default 0, ukuran besar -->
+    <div class="result-area">
+        <div class="result-label">HASIL PERHITUNGAN</div>
+        <div class="result-value" id="hasilTampilan">0</div>
+        <div id="errorDetail" style="min-height: 28px;"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
