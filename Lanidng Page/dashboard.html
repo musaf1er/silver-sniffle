@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- Deklarasi HTML5 -->
+<html lang="id">
+<!-- Bahasa Indonesia -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SaaSPro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <!-- Font Inter -->
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS global -->
+</head>
+
+<body>
+    <!-- DASHBOARD CONTAINER: Layout utama dengan sidebar dan konten -->
+    <div class="dashboard-container">
+        <!-- SIDEBAR NAVIGASI: Menu vertikal di sisi kiri -->
+        <aside class="sidebar">
+            <!-- Bagian sidebar -->
+            <div class="sidebar-brand">
+                <span class="logo-text">SaaSPro</span>
+                <!-- Logo di sidebar -->
+            </div>
+            <nav class="sidebar-nav">
+                <!-- Menu navigasi sidebar dengan atribut data-page untuk konten dinamis -->
+                <a href="#" class="nav-item active" data-page="dashboard">
+                    <span class="nav-icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+                <!-- Menu Dashboard dengan ikon -->
+                <a href="#" class="nav-item" data-page="profile">
+                    <span class="nav-icon">👤</span>
+                    <span>Profil</span>
+                </a>
+                <!-- Menu Profil -->
+                <a href="#" class="nav-item" data-page="settings">
+                    <span class="nav-icon">⚙️</span>
+                    <span>Pengaturan</span>
+                </a>
+                <!-- Menu Pengaturan -->
+                <a href="#" id="logoutBtn" class="nav-item logout-nav">
+                    <span class="nav-icon">🚪</span>
+                    <span>Keluar</span>
+                </a>
+                <!-- Tombol Logout -->
+            </nav>
+            <!-- Tombol toggle dark mode di sidebar -->
+            <button id="darkModeToggleSidebar" class="dark-mode-toggle-sidebar" aria-label="Toggle Dark Mode">
+                <span class="toggle-icon">🌙</span>
+                <span>Mode Gelap</span>
+            </button>
+        </aside>
+
+        <!-- MAIN CONTENT: Area konten utama dashboard -->
+        <main class="dashboard-main">
+            <div class="dashboard-header">
+                <h1>Dashboard</h1>
+                <!-- Judul halaman -->
+                <div id="welcomeMessage" class="welcome-badge"></div>
+                <!-- Tempat menampilkan pesan selamat datang dengan username -->
+            </div>
+
+            <!-- KONTEN DINAMIS: Akan berubah berdasarkan menu yang dipilih -->
+            <div id="dynamicContent">
+                <!-- Default konten dashboard (stats cards) -->
+                <div class="stats-grid">
+                    <!-- Grid kartu statistik -->
+                    <div class="stat-card">
+                        <div class="stat-title">Total Pengguna</div>
+                        <div class="stat-value">1,234</div>
+                        <div class="stat-change">+12% dari bulan lalu</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-title">Pendapatan</div>
+                        <div class="stat-value">Rp 98,5 Jt</div>
+                        <div class="stat-change">+8% dari bulan lalu</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-title">Aktif Hari Ini</div>
+                        <div class="stat-value">456</div>
+                        <div class="stat-change">+5% dari kemarin</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-title">Tingkat Kepuasan</div>
+                        <div class="stat-value">94%</div>
+                        <div class="stat-change">Rating 4.8/5</div>
+                    </div>
+                </div>
+                <!-- Tambahan konten aktivitas terbaru -->
+                <div class="recent-activity">
+                    <h3>Aktivitas Terbaru</h3>
+                    <ul>
+                        <li>Pengguna baru mendaftar: John Doe</li>
+                        <li>Laporan bulanan telah diperbarui</li>
+                        <li>Maintenance server selesai</li>
+                        <li>Integrasi API baru ditambahkan</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- JavaScript untuk proteksi halaman dan logika dashboard -->
+</body>
+
+</html>

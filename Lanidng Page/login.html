@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- Deklarasi dokumen HTML5 -->
+<html lang="id">
+<!-- Bahasa Indonesia -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Encoding UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsive viewport -->
+    <title>Masuk - SaaSPro</title>
+    <!-- Judul halaman login -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <!-- Font Inter -->
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS global -->
+</head>
+
+<body class="login-body">
+    <!-- Kelas khusus untuk halaman login agar latar belakang berbeda -->
+
+    <!-- Container utama form login dengan efek glassmorphism premium -->
+    <div class="login-container">
+        <div class="login-card">
+            <!-- Kartu login yang membungkus form -->
+            <div class="login-header">
+                <h2>Selamat Datang Kembali</h2>
+                <!-- Judul form login -->
+                <p>Masuk ke akun SaaSPro Anda</p>
+                <!-- Subjudul -->
+            </div>
+
+            <!-- FORM LOGIN -->
+            <form id="loginForm">
+                <!-- ID untuk ditangani JavaScript -->
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <!-- Label untuk field username -->
+                    <input type="text" id="username" name="username" placeholder="admin" required autocomplete="off">
+                    <!-- Input teks username, required wajib diisi -->
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <!-- Label untuk field password -->
+                    <input type="password" id="password" name="password" placeholder="1234" required>
+                    <!-- Input password, required wajib diisi -->
+                </div>
+
+                <button type="submit" class="login-btn">Masuk ke Dashboard</button>
+                <!-- Tombol submit login -->
+
+                <div id="errorMessage" class="error-message"></div>
+                <!-- Tempat menampilkan pesan error jika login gagal -->
+            </form>
+
+            <div class="login-footer">
+                <p>Demo: gunakan admin / 1234</p>
+                <!-- Informasi kredensial demo -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Tombol toggle dark mode floating untuk halaman login -->
+    <button id="darkModeToggleLogin" class="dark-mode-toggle floating-toggle" aria-label="Toggle Dark Mode">
+        🌙
+    </button>
+
+    <script src="script.js"></script>
+    <!-- JavaScript untuk logika login -->
+</body>
+
+</html>

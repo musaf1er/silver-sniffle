@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!-- Mendeklarasikan tipe dokumen sebagai HTML5 -->
+<html lang="id">
+<!-- Menentukan bahasa utama halaman sebagai Bahasa Indonesia -->
+
+<head>
+    <!-- Bagian head berisi metadata dan tautan ke resource eksternal -->
+    <meta charset="UTF-8">
+    <!-- Mengatur encoding karakter agar mendukung huruf khusus -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Membuat halaman responsive pada perangkat mobile -->
+    <title>SaaSPro - Solusi Premium untuk Bisnis Anda</title>
+    <!-- Judul yang muncul di tab browser -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <!-- Font Inter dari Google Fonts untuk tipografi modern -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Menghubungkan file CSS eksternal untuk styling global -->
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR: Bagian menu utama di atas halaman dengan efek glassmorphism -->
+    <nav class="navbar">
+        <!-- Container untuk membatasi lebar konten navbar -->
+        <div class="container nav-container">
+            <!-- Logo perusahaan / brand -->
+            <div class="logo">
+                <span class="logo-text">SaaSPro</span>
+                <!-- Teks logo dengan gradien premium -->
+            </div>
+            <!-- Menu navigasi utama -->
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Beranda</a></li>
+                <!-- Tautan ke section Beranda dengan smooth scroll -->
+                <li><a href="#features" class="nav-link">Fitur</a></li>
+                <!-- Tautan ke section Fitur -->
+                <li><a href="login.html" class="nav-link login-btn-nav">Masuk</a></li>
+                <!-- Tautan ke halaman login dengan gaya tombol premium -->
+                <li>
+                    <button id="darkModeToggleNav" class="dark-mode-toggle" aria-label="Toggle Dark Mode">
+                        🌙
+                    </button>
+                    <!-- Tombol toggle dark mode di navbar -->
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION: Bagian utama dengan pesan besar dan CTA -->
+    <section id="home" class="hero">
+        <!-- Container untuk membatasi lebar konten hero -->
+        <div class="container hero-container">
+            <!-- Bagian kiri hero (teks) -->
+            <div class="hero-content">
+                <h1 class="hero-title">Solusi SaaS <span class="gradient-text">Premium</span><br>untuk Bisnis Anda</h1>
+                <!-- Heading utama dengan efek gradien pada kata "Premium" -->
+                <p class="hero-subtitle">Tingkatkan produktivitas tim Anda dengan platform all-in-one yang modern,
+                    cepat, dan mudah digunakan.</p>
+                <!-- Subheading menjelaskan manfaat produk -->
+                <a href="login.html" class="cta-button">Mulai Sekarang</a>
+                <!-- Tombol ajakan bertindak yang mengarah ke login -->
+            </div>
+            <!-- Bagian kanan hero (ilustrasi visual dengan kartu apung) -->
+            <div class="hero-image">
+                <div class="floating-card">Analytics</div>
+                <!-- Kartu apung simulasi fitur analytics -->
+                <div class="floating-card">Dashboard</div>
+                <!-- Kartu apung simulasi dashboard -->
+                <div class="floating-card">Real-time</div>
+                <!-- Kartu apung simulasi real-time data -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION: Menampilkan keunggulan produk dalam bentuk kartu -->
+    <section id="features" class="features">
+        <div class="container">
+            <!-- Judul section fitur -->
+            <h2 class="section-title">Fitur Unggulan</h2>
+            <p class="section-subtitle">Semua yang Anda butuhkan untuk mengelola bisnis secara efisien</p>
+            <!-- Subjudul section fitur -->
+            <div class="features-grid">
+                <!-- Grid container untuk kartu fitur -->
+
+                <!-- Kartu Fitur 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <!-- Ikon fitur -->
+                    <h3 class="feature-title">Analytics Real-time</h3>
+                    <!-- Judul fitur -->
+                    <p class="feature-desc">Pantau performa bisnis Anda secara langsung dengan grafik interaktif.</p>
+                    <!-- Deskripsi fitur -->
+                </div>
+
+                <!-- Kartu Fitur 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Keamanan Terjamin</h3>
+                    <p class="feature-desc">Enkripsi end-to-end dan perlindungan data kelas enterprise.</p>
+                </div>
+
+                <!-- Kartu Fitur 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3 class="feature-title">Kolaborasi Tim</h3>
+                    <p class="feature-desc">Kerja sama tanpa batas dengan fitur chat dan berbagi file.</p>
+                </div>
+
+                <!-- Kartu Fitur 4 -->
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3 class="feature-title">Integrasi Mudah</h3>
+                    <p class="feature-desc">Hubungkan dengan berbagai tools populer seperti Slack dan Zapier.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER: Bagian bawah halaman dengan informasi hak cipta -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>2025 SaaSPro. Dibangun untuk Indonesia.</p>
+                <!-- Teks hak cipta -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Menghubungkan file JavaScript eksternal -->
+    <script src="script.js"></script>
+</body>
+
+</html>
